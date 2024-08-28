@@ -58,7 +58,7 @@ The user cannot access the accounting folder because they are not part of the AC
 <p>
 <img src="https://i.imgur.com/RyqrZKc.png" height="50%" width="50%" alt="Permissions Steps"/>
 <img src="https://i.imgur.com/4ohRM53.png" height="50%" width="50%" alt="Permissions Steps"/>
-<img src="https://i.imgur.com/GvZliIV.png" height="50%" width="50%" alt="Permissions Steps"/>
+<img src="https://i.imgur.com/GvZliIV.png" height="80%" width="80%" alt="Permissions Steps"/>
 </p>
 
 <p>
