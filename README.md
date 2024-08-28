@@ -18,7 +18,10 @@ This lab centers around file permissions and shared resources within an Active D
 
 <h2>File Permissions Configuration Steps</h2>
 <p>
-In order to set permissions to folders and files, we need to create the folders to share. While logged in to the domain controller VM as an admin, create the folders. I have created 4 appropriately named folders to set permissions to on the C:\ drive. To share a folder and assign permissions, open the folder's Properties and click on Share under the Sharing tab. You can specify people on the network to share with and assign appropriate permissions. I set the following permissions for the folders (the accounting folder will be changed later):
+To set permissions for folders and files, we first need to create the folders we want to share. While logged in as an admin on the domain controller VM, I created four appropriately named folders on the C:\ drive. To share a folder and assign permissions, open the folder's Properties, and click on Share under the Sharing tab. From there, you can specify the users on the network to share with and assign the necessary permissions. I have set the following permissions for the folders (with the accounting folder's permissions to be changed later):
+
+- Domain Users can Read the read-access folder and they have Read/Write permissions on the write-access folder
+- Domain Admins have Read/Write access to the no-access folder
 </p>
 <br />
 
@@ -28,15 +31,15 @@ In order to set permissions to folders and files, we need to create the folders 
 </p>
 
 <p>
-Domain Users can Read the read-access folder and they have Read/Write permissions on the write-access folder.
-Domain Admins have Read/Write access to the no-access folder.
+On the client VM, navigate to the shared folders in File Explorer using the path: \dc-1. You'll notice that some folders only allow you to view files without adding new ones, while one folder doesn't allow access at all. This is because, as a Domain User, the permissions for each folder are linked to the relevant Security Group and the specific permissions set for users within that group.
 </p>
-
 <p>
 <img src="https://i.imgur.com/CZ0yjst.png" height="80%" width="80%" alt="Permissions Steps"/>
 </p>
+
+
 <p>
-On the client VM, navigate to the shared folders through the following path in File Explorer: \\dc-1. Notice how some folders cannot allow you to add files, but only view them. One does not allow access at all. This is because as a Domain User, permissions for the folder are tied to the respective Security Group and the folder's own set permissions for users within that Security Group.
+Next, we'll create a new Security Group and assign the appropriate permissions to the accounting folder. On the domain controller, open the Active Directory Users and Computers panel and create a new Group named ACCOUNTANTS. After creating the group, go to the accounting folder and assign Read/Write permissions to the ACCOUNTANTS Group.
 </p>
 <br />
 
@@ -44,10 +47,8 @@ On the client VM, navigate to the shared folders through the following path in F
 <img src="https://i.imgur.com/NgM0CcI.png" height="80%" width="80%" alt="Permissions Steps"/>
 <img src="https://i.imgur.com/I4k9T2J.png" height="80%" width="80%" alt="Permissions Steps"/>
 </p>
-<p>
-Next, we will make a new Security Group and assign appropriate permissions to the accounting folder. On the domain controller, have the Active Directory Users and Computers panel open. Create a new Group called ACCOUNTANTS. After creating the new Group, go to the accounting folder and assign permissions to the folder so the ACCOUNTANTS Group has Read/Write permissions.
-</p>
-<br />
+
+
 
 <p>
 <img src="https://i.imgur.com/xev1Svv.png" height="80%" width="80%" alt="Permissions Steps"/>
