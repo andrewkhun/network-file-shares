@@ -52,15 +52,16 @@ Next, we'll create a new Security Group and assign the appropriate permissions t
 
 
 <p>
-The user cannot access the accounting folder because they are not part of the ACCOUNTANTS Security Group. Log off the client so that the permissions are in place by the time the client is logged into again. On the domain controller, open the ACCOUNTANTS Properties on Active Directory Users and Computers. In the Members tab, add the respective user. In my case, it is bon.rovej. Upon logging into the client, bon.rovej is now able to open the accounting folder because they are part of ACCOUNTANTS.
+The user cannot access the accounting folder because they are not part of the ACCOUNTANTS Security Group. Log off the client to ensure the permissions take effect when the client logs in again. On the domain controller, open the ACCOUNTANTS Properties in Active Directory Users and Computers. Under the Members tab, add the respective user — in my case, bat.ciq. </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/xev1Svv.png" height="80%" width="80%" alt="Permissions Steps"/>
-<img src="https://i.imgur.com/SHotVB2.png" height="80%" width="80%" alt="Permissions Steps"/>
+<img src="https://i.imgur.com/RyqrZKc.png" height="50%" width="50%" alt="Permissions Steps"/>
+<img src="https://i.imgur.com/4ohRM53.png" height="50%" width="50%" alt="Permissions Steps"/>
+<img src="https://i.imgur.com/GvZliIV.png" height="50%" width="50%" alt="Permissions Steps"/>
 </p>
 
+<p>
+After logging back into the client, bat.ciq can now open the accounting folder because they are part of the ACCOUNTANTS group. This concludes the lab!
+</p>
 
-<h2>Lessons Learned </h2>
-
-This lab made me understand how file permissions work in the context of Windows/Active Directory. In a real setting, I might have to set permissions so that people can only access what they need to in order to complete their work. It is not necessary to give more permissions than what is needed.
