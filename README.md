@@ -1,4 +1,4 @@
-<p align="center">
+![image](https://github.com/user-attachments/assets/949dbcca-9433-46e0-aa42-27a4789dbc40)<p align="center">
 <img src="https://i.imgur.com/Mf76DFC.jpeg" alt="Permissions Photo"/>
 </p>
 
@@ -44,19 +44,22 @@ Next, we'll create a new Security Group and assign the appropriate permissions t
 <br />
 
 <p>
-<img src="https://i.imgur.com/NgM0CcI.png" height="80%" width="80%" alt="Permissions Steps"/>
-<img src="https://i.imgur.com/I4k9T2J.png" height="80%" width="80%" alt="Permissions Steps"/>
+<img src="https://i.imgur.com/nVPVv6Z.png" height="80%" width="80%" alt="Permissions Steps"/>
+<img src="https://i.imgur.com/BYHy7cb.png" height="80%" width="80%" alt="Permissions Steps"/>
+<img src="https://i.imgur.com/A7qJoMe.png" height="80%" width="80%" alt="Permissions Steps"/>
+<img src="https://i.imgur.com/ikqumCN.png" height="80%" width="80%" alt="Permissions Steps"/>
 </p>
 
 
+<p>
+The user cannot access the accounting folder because they are not part of the ACCOUNTANTS Security Group. Log off the client so that the permissions are in place by the time the client is logged into again. On the domain controller, open the ACCOUNTANTS Properties on Active Directory Users and Computers. In the Members tab, add the respective user. In my case, it is bon.rovej. Upon logging into the client, bon.rovej is now able to open the accounting folder because they are part of ACCOUNTANTS.
+<br />
 
 <p>
 <img src="https://i.imgur.com/xev1Svv.png" height="80%" width="80%" alt="Permissions Steps"/>
 <img src="https://i.imgur.com/SHotVB2.png" height="80%" width="80%" alt="Permissions Steps"/>
 </p>
-<p>
-The user cannot access the accounting folder because they are not part of the ACCOUNTANTS Security Group. Log off the client so that the permissions are in place by the time the client is logged into again. On the domain controller, open the ACCOUNTANTS Properties on Active Directory Users and Computers. In the Members tab, add the respective user. In my case, it is bon.rovej. Upon logging into the client, bon.rovej is now able to open the accounting folder because they are part of ACCOUNTANTS.
-<br />
+
 
 <h2>Lessons Learned </h2>
 
