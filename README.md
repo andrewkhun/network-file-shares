@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/949dbcca-9433-46e0-aa42-27a4789dbc40)<p align="center">
+<p align="center">
 <img src="https://i.imgur.com/Mf76DFC.jpeg" alt="Permissions Photo"/>
 </p>
 
